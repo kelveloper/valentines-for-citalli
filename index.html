@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>For Citalli 💕</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Hearts Background -->
+    <div id="hearts-bg"></div>
+
+    <!-- Screen 1: Intro -->
+    <section id="intro" class="screen active">
+        <div class="content">
+            <div class="envelope" id="envelope">
+                <div class="envelope-flap"></div>
+                <div class="envelope-body">
+                    <div class="letter">💌</div>
+                </div>
+            </div>
+            <h1 class="fade-in">Hey Citalli...</h1>
+            <p class="subtitle fade-in delay-1">I made something special just for you</p>
+            <button class="btn fade-in delay-2" onclick="nextScreen('gif-1')">Open it 💝</button>
+        </div>
+    </section>
+
+    <!-- Screen 2: GIF 1 - Bear with heart -->
+    <section id="gif-1" class="screen">
+        <div class="content">
+            <p class="gif-message">Every day with you feels like this...</p>
+            <div class="gif-container">
+                <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzNsaG9iZ3RuemFpNXExdHE0dDhzMHAwMjRyYjE4ZGticXh5M3NkOCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/8tWFiyF4thmIqgDD0q/giphy.gif" alt="Cute bear with heart" class="gif" loading="eager">
+            </div>
+            <button class="btn" onclick="nextScreen('gif-2')">Next →</button>
+        </div>
+    </section>
+
+    <!-- Screen 3: GIF 2 - Bear 2 -->
+    <section id="gif-2" class="screen">
+        <div class="content">
+            <p class="gif-message">You make my heart do backflips</p>
+            <div class="gif-container">
+                <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdWt0bms5amhzeXV0bmQ2MXBuMThtMnVsazlndDl6dzdwMGZwaHVkNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/y74Z50eZ8Oiqf0s4b1/giphy.gif" alt="Cute bear" class="gif" loading="eager">
+            </div>
+            <button class="btn" onclick="nextScreen('gif-3')">Keep going →</button>
+        </div>
+    </section>
+
+    <!-- Screen 4: GIF 3 - Bear 3 -->
+    <section id="gif-3" class="screen">
+        <div class="content">
+            <p class="gif-message">I literally can't stop thinking about you</p>
+            <div class="gif-container">
+                <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bTA0aDUxNmp1eDI5d2F0bThwazVsdDZkN29ucm93cXM5dGhoNmZ4aCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3ohhwgKzV4SuseaZag/giphy.gif" alt="Cute bear" class="gif" loading="eager">
+            </div>
+            <button class="btn" onclick="nextScreen('gif-4')">One more... →</button>
+        </div>
+    </section>
+
+    <!-- Screen 5: GIF 4 - Funny puke valentine -->
+    <section id="gif-4" class="screen">
+        <div class="content">
+            <p class="gif-message">Ok maybe I'm being a LITTLE extra...</p>
+            <div class="gif-container">
+                <img src="https://gifdb.com/images/high/funny-puke-be-mine-valentines-day-e259th6xfh5hg9nh.gif" alt="Funny valentine" class="gif" loading="eager">
+            </div>
+            <p class="gif-submessage">BUT... I have a very important question 👀</p>
+            <button class="btn" onclick="nextScreen('question')">Here it comes... 💕</button>
+        </div>
+    </section>
+
+    <!-- Screen 6: The Big Question -->
+    <section id="question" class="screen">
+        <!-- Angry Cat - fades in bottom-right mid-sequence -->
+        <div id="angry-cat-bg" class="reaction-corner reaction-right">
+            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnJ4cTVpc3dzYXVwemx2M2wzaXYwYWcxaWQ2cXdsNnA1YzNxNGF5eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GAXXHdS0zXawVLOJLY/giphy.gif" alt="Angry cat" class="reaction-img">
+        </div>
+        <div class="content question-content">
+            <div class="gif-container">
+                <img src="https://media1.tenor.com/m/XqcivfMwQYYAAAAC/happy-valentines.gif" alt="Will you be my valentine" class="gif valentine-gif" loading="eager">
+            </div>
+            <h1 class="question-text">Citalli, will you be my Valentine?</h1>
+            <div class="buttons-container" id="buttons-container">
+                <span id="arrow-left" class="arrow arrow-left hidden">&#10148;</span>
+                <button id="yes-btn" class="btn yes-btn" onclick="sayYes()">Yes!</button>
+                <span id="arrow-right" class="arrow arrow-right hidden">&#10148;</span>
+                <button id="no-btn" class="btn no-btn">No</button>
+            </div>
+            <span id="arrow-top" class="arrow arrow-top hidden">&#10148;</span>
+            <p id="no-message" class="no-message" style="opacity: 0;"></p>
+        </div>
+    </section>
+
+    <!-- Rick Roll Invasion Screen -->
+    <div id="rickroll-invasion" class="invasion-screen hidden">
+        <div id="rickroll-container"></div>
+        <p class="invasion-marquee" id="invasion-marquee">Rick Rolled Time 🕺</p>
+    </div>
+
+    <!-- Screen 7: Celebration -->
+    <section id="celebration" class="screen">
+        <canvas id="confetti-canvas"></canvas>
+        <div id="petals-container"></div>
+        <!-- Dancing Bad Bunny on both sides -->
+        <div class="dancing-bb dancing-bb-left">
+            <img src="https://media.giphy.com/media/65R5eanb4wj9jPZKDN/giphy.gif" alt="Dancing Bad Bunny" class="dancing-bb-img">
+        </div>
+        <div class="dancing-bb dancing-bb-right">
+            <img src="https://media.giphy.com/media/65R5eanb4wj9jPZKDN/giphy.gif" alt="Dancing Bad Bunny" class="dancing-bb-img">
+        </div>
+        <div class="content celebration-content">
+            <h1 class="celebration-title">SHE SAID YES!! 🎉</h1>
+            <div class="heart-burst">💕</div>
+            <p class="celebration-message">Citalli, you just made me the happiest person ever</p>
+            <div class="meme-section">
+                <p class="meme-caption">me after she said yes:</p>
+                <div class="gif-container">
+                    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2hheWxrejNjMzFzZnNobHM4b2JoZ2sybWllOGV2cmdjNml5YmQ5MiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/T5eZR2cnVZWxxScSwU/giphy.gif" alt="Bad Bunny celebration" class="gif meme-gif">
+                </div>
+            </div>
+            <p class="celebration-submessage">Happy Valentine's Day, mi amor 💕</p>
+            <div class="sparkle-container" id="sparkle-container"></div>
+        </div>
+    </section>
+
+    <!-- Celebration Audio - drop your MP3 in the project folder and update the src -->
+    <audio id="celebration-audio" preload="auto">
+        <source src="baile-inolvidable.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
