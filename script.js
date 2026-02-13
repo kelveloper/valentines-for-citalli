@@ -1,5 +1,5 @@
 /* ========================================
-   VALENTINE'S APP FOR CITALLI
+   VALENTINE'S APP FOR CITLALLI
    ======================================== */
 
 // ── Floating Hearts Background ──
@@ -311,7 +311,7 @@ function startConfetti() {
 
     const confettiPieces = [];
     const colors = ['#ff6b9d', '#ff2d78', '#ffd700', '#ff69b4', '#ff1493',
-                    '#ffb3d0', '#ff85a2', '#ffc0cb', '#ff4081', '#e040fb'];
+        '#ffb3d0', '#ff85a2', '#ffc0cb', '#ff4081', '#e040fb'];
 
     // Create confetti pieces
     for (let i = 0; i < 150; i++) {
